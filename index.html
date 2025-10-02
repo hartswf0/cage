@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Auditory-Linguistic Perceptual Loom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-brand">Auditory-Linguistic Loom</div>
+        <ul class="nav-links">
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#phonetic-lab">Phonetic Lab</a></li>
+            <li><a href="#color-experiment">Color Experiment</a></li>
+            <li><a href="#trobriand-magic">Trobriand Magic</a></li>
+            <li><a href="#perceptual-loom">The Loom</a></li>
+            <li><a href="#morphisms">Morphisms</a></li>
+            <li><a href="#implications">Implications</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero-section">
+        <div class="waveform-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">The Auditory-Linguistic Perceptual Loom</h1>
+            <p class="hero-subtitle">How Language Shapes What We Hear: An Exploration of the Sapir-Whorf Hypothesis Through Sound and Listening</p>
+            <div class="sound-wave-animation">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class="section intro-section">
+        <div class="container">
+            <h2>Language as Sensory Interface</h2>
+            <div class="quote-container">
+                <blockquote class="sapir-quote">
+                    <p>"We see and hear and otherwise experience very largely as we do because the language habits of our community predispose certain choices of interpretation."</p>
+                    <cite>— Edward Sapir, 1941</cite>
+                </blockquote>
+            </div>
+            
+            <div class="animated-text-reveal">
+                <p class="reveal-text">This presentation challenges a fundamental assumption about human perception...</p>
+                <p class="reveal-text">That "hearing" is merely passive acoustic reception...</p>
+                <p class="reveal-text">Instead, we reveal listening as an active, linguistically mediated process...</p>
+            </div>
+
+            <div class="phoneme-reality-container">
+                <div class="phoneme-quote">
+                    <h3>The Psychological Reality of the Phoneme</h3>
+                    <blockquote>
+                        <p>"leads individuals to assert the existence of sounds that are not present, and deny the existence of sounds that are present."</p>
+                        <cite>— Edward Sapir, 1933</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phonetic Symbolism Laboratory -->
+    <section id="phonetic-lab" class="section lab-section">
+        <div class="container">
+            <h2>Phonetic Symbolism Laboratory</h2>
+            <p class="section-intro">Experience how sounds carry inherent size associations. High vowels evoke smallness, low vowels evoke largeness.</p>
+            
+            <div class="audio-experiments">
+                <div class="vowel-experiment">
+                    <h3>Vowel Size Associations</h3>
+                    <div class="vowel-grid">
+                        <div class="vowel-item front-vowel">
+                            <button class="audio-btn" data-frequency="800" data-size="small">
+                                <span class="vowel-symbol">i</span>
+                                <span class="size-indicator small">●</span>
+                            </button>
+                            <p>High Front Vowel</p>
+                        </div>
+                        <div class="vowel-item front-vowel">
+                            <button class="audio-btn" data-frequency="600" data-size="medium-small">
+                                <span class="vowel-symbol">e</span>
+                                <span class="size-indicator medium-small">●</span>
+                            </button>
+                            <p>Mid Front Vowel</p>
+                        </div>
+                        <div class="vowel-item back-vowel">
+                            <button class="audio-btn" data-frequency="400" data-size="medium-large">
+                                <span class="vowel-symbol">o</span>
+                                <span class="size-indicator medium-large">●</span>
+                            </button>
+                            <p>Mid Back Vowel</p>
+                        </div>
+                        <div class="vowel-item back-vowel">
+                            <button class="audio-btn" data-frequency="250" data-size="large">
+                                <span class="vowel-symbol">ɑ</span>
+                                <span class="size-indicator large">●</span>
+                            </button>
+                            <p>Low Back Vowel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="frequency-display">
+                    <canvas id="frequencyCanvas" width="400" height="200"></canvas>
+                    <p>Real-time frequency visualization</p>
+                </div>
+
+                <div class="word-examples">
+                    <h3>Word Examples</h3>
+                    <div class="word-categories">
+                        <div class="word-category small-words">
+                            <h4>Small-Associated Words</h4>
+                            <ul>
+                                <li>tiny</li>
+                                <li>teeny</li>
+                                <li>petite</li>
+                                <li>slim</li>
+                            </ul>
+                        </div>
+                        <div class="word-category large-words">
+                            <h4>Large-Associated Words</h4>
+                            <ul>
+                                <li>huge</li>
+                                <li>enormous</li>
+                                <li>colossal</li>
+                                <li>grand</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Boundary Experiment -->
+    <section id="color-experiment" class="section color-section">
+        <div class="container">
+            <h2>The Color Boundary Experiment</h2>
+            <p class="section-intro">The Kay-Kempton experiment revealed how linguistic boundaries distort color perception.</p>
+            
+            <div class="experiment-container">
+                <div class="color-gradient-container">
+                    <div class="color-gradient" id="colorGradient"></div>
+                    <div class="boundary-marker" id="boundaryMarker"></div>
+                </div>
+                
+                <div class="experiment-controls">
+                    <label for="languageSelect">Select Language Perspective:</label>
+                    <select id="languageSelect" class="form-control">
+                        <option value="english">English (Blue/Green Distinction)</option>
+                        <option value="tarahumara">Tarahumara (Single Blue-Green Term)</option>
+                    </select>
+                </div>
+
+                <div class="results-display">
+                    <h3>Experimental Results</h3>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <h4>English Speakers</h4>
+                            <div class="stat">29/30 instances</div>
+                            <p>Consistently distorted boundary perception</p>
+                        </div>
+                        <div class="result-item">
+                            <h4>Tarahumara Speakers</h4>
+                            <div class="stat">13/24 instances</div>
+                            <p>Random distribution (no systematic bias)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-picker-test">
+                    <h3>Test Your Own Boundary</h3>
+                    <p>Click on the gradient where you think blue becomes green:</p>
+                    <div class="interactive-gradient" id="interactiveGradient"></div>
+                    <div id="userResult"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trobriand Magic Section -->
+    <section id="trobriand-magic" class="section magic-section">
+        <div class="container">
+            <h2>Trobriand Magic & Functional Sound</h2>
+            <p class="section-intro">Malinowski's study reveals how sound performs cultural work beyond semantic meaning.</p>
+            
+            <div class="magic-content">
+                <div class="magic-quote">
+                    <blockquote>
+                        <p>"Magic formulas cannot really be translated... They do, however, accomplish cultural work within Trobriand society. They are therefore functionally situated."</p>
+                        <cite>— Bronislaw Malinowski, 1935</cite>
+                    </blockquote>
+                </div>
+
+                <div class="megwa-structure">
+                    <h3>Structure of a Megwa (Spell)</h3>
+                    <div class="spell-components">
+                        <div class="spell-component">
+                            <div class="component-name">u'ula</div>
+                            <div class="component-desc">Invocation</div>
+                        </div>
+                        <div class="spell-arrow">→</div>
+                        <div class="spell-component">
+                            <div class="component-name">tapwala</div>
+                            <div class="component-desc">Main Spell</div>
+                        </div>
+                        <div class="spell-arrow">→</div>
+                        <div class="spell-component">
+                            <div class="component-name">doginala</div>
+                            <div class="component-desc">Final Tip</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cultural-work-diagram">
+                    <h3>Sound as Cultural Interface</h3>
+                    <div class="interface-flow">
+                        <div class="flow-item">
+                            <div class="flow-box">Ritual Utterance</div>
+                            <div class="flow-desc">Beyond semantic content</div>
+                        </div>
+                        <div class="flow-arrow">⟹</div>
+                        <div class="flow-item">
+                            <div class="flow-box">Social Function</div>
+                            <div class="flow-desc">Community belonging</div>
+                        </div>
+                        <div class="flow-arrow">⟹</div>
+                        <div class="flow-item">
+                            <div class="flow-box">Cultural Reality</div>
+                            <div class="flow-desc">Affirmed through sound</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ethnographic-context">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1759431537/pplx_project_search_images/59c08e1d461e2eba2f6560fe184e432653ac0c8b.png" 
+                         alt="Ethnographic photo of ritualistic sound practices" 
+                         class="ethnographic-image">
+                    <p class="image-caption">Cultural sound practices in traditional societies demonstrate the functional power of oral traditions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perceptual Loom Diagram -->
+    <section id="perceptual-loom" class="section loom-section">
+        <div class="container">
+            <h2>The Auditory-Linguistic Perceptual Loom</h2>
+            <p class="section-intro">An interactive diagram showing how language weaves raw sensory input into conscious experience.</p>
+            
+            <div class="loom-diagram">
+                <div class="raw-flux">
+                    <h3>Raw Auditory/Visual Flux</h3>
+                    <div class="flux-waves">
+                        <canvas id="fluxCanvas" width="300" height="100"></canvas>
+                    </div>
+                    <p>Undifferentiated sensory input</p>
+                </div>
+
+                <div class="linguistic-loom">
+                    <h3>Linguistic Loom</h3>
+                    <div class="loom-components">
+                        <div class="loom-component" data-info="phonemic">
+                            <h4>Phonemic Threaders</h4>
+                            <div class="component-visual phonemic"></div>
+                            <p>Categorize continuous sound into discrete phonemes</p>
+                        </div>
+                        <div class="loom-component" data-info="lexical">
+                            <h4>Lexical Threaders</h4>
+                            <div class="component-visual lexical"></div>
+                            <p>Filter and label specific distinctions</p>
+                        </div>
+                        <div class="loom-component" data-info="grammatical">
+                            <h4>Grammatical Weavers</h4>
+                            <div class="component-visual grammatical"></div>
+                            <p>Structure threads into meaningful patterns</p>
+                        </div>
+                        <div class="loom-component" data-info="oral">
+                            <h4>Oral Resonance Chamber</h4>
+                            <div class="component-visual oral"></div>
+                            <p>Process functional sounds beyond semantics</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="perceptual-fabric">
+                    <h3>Perceptual Fabric</h3>
+                    <div class="fabric-pattern">
+                        <canvas id="fabricCanvas" width="300" height="200"></canvas>
+                    </div>
+                    <p>Structured conscious experience</p>
+                </div>
+
+                <div class="feedback-spool">
+                    <h3>Cognitive Feedback Spool</h3>
+                    <div class="spool-visual">
+                        <div class="rotating-spool"></div>
+                    </div>
+                    <p>Thought and cultural needs reshape the loom</p>
+                </div>
+            </div>
+
+            <div class="loom-info-panel" id="loomInfoPanel">
+                <h4 id="infoPanelTitle">Select a component to learn more</h4>
+                <p id="infoPanelContent">Click on any component of the loom to understand its role in shaping perception.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Morphisms Section -->
+    <section id="morphisms" class="section morphisms-section">
+        <div class="container">
+            <h2>Morphisms & Transformations</h2>
+            <p class="section-intro">Key transformations that reveal how language reshapes raw experience.</p>
+            
+            <div class="morphisms-grid">
+                <div class="morphism-card">
+                    <h3>Acoustic Input → Phoneme</h3>
+                    <div class="morphism-visual">
+                        <div class="morph-from">Continuous Sound Spectrum</div>
+                        <div class="morph-arrow">⟶</div>
+                        <div class="morph-to">Discrete Phonemic Units</div>
+                    </div>
+                    <div class="tension">
+                        <strong>Tension:</strong> Objective acoustic reality vs. subjective, linguistically-constructed auditory perception
+                    </div>
+                </div>
+
+                <div class="morphism-card">
+                    <h3>Vowel Sound → Size Association</h3>
+                    <div class="morphism-visual">
+                        <div class="morph-from">High/Low Vowel Frequencies</div>
+                        <div class="morph-arrow">⟶</div>
+                        <div class="morph-to">Small/Large Conceptual Size</div>
+                    </div>
+                    <div class="tension">
+                        <strong>Tension:</strong> Arbitrary linguistic assignment vs. psycho-acoustic symbolism in meaning-making
+                    </div>
+                </div>
+
+                <div class="morphism-card">
+                    <h3>Lexical Boundary → Perceptual Separation</h3>
+                    <div class="morphism-visual">
+                        <div class="morph-from">Blue/Green Linguistic Distinction</div>
+                        <div class="morph-arrow">⟶</div>
+                        <div class="morph-to">Distorted Color Spectrum Perception</div>
+                    </div>
+                    <div class="tension">
+                        <strong>Tension:</strong> Continuous natural phenomena vs. discretized, linguistically-mediated perception
+                    </div>
+                </div>
+
+                <div class="morphism-card">
+                    <h3>Verbalization → Memory Interference</h3>
+                    <div class="morphism-visual">
+                        <div class="morph-from">Direct Visual Experience</div>
+                        <div class="morph-arrow">⟶</div>
+                        <div class="morph-to">Linguistically Biased Recall</div>
+                    </div>
+                    <div class="tension">
+                        <strong>Tension:</strong> Direct sensory access vs. linguistically biased recoding
+                    </div>
+                </div>
+
+                <div class="morphism-card">
+                    <h3>Grammar → Cognitive Efficiency</h3>
+                    <div class="morphism-visual">
+                        <div class="morph-from">Grammatical Markers (Subjunctive)</div>
+                        <div class="morph-arrow">⟶</div>
+                        <div class="morph-to">Ease of Counterfactual Thought</div>
+                    </div>
+                    <div class="tension">
+                        <strong>Tension:</strong> Universal cognitive capacity vs. language-specific cognitive efficiency
+                    </div>
+                </div>
+
+                <div class="morphism-card">
+                    <h3>Oral Formula → Cultural Belonging</h3>
+                    <div class="morphism-visual">
+                        <div class="morph-from">Ritual Sound Utterance</div>
+                        <div class="morph-arrow">⟶</div>
+                        <div class="morph-to">Social Function & Community</div>
+                    </div>
+                    <div class="tension">
+                        <strong>Tension:</strong> Semantic comprehensibility vs. functional/ritualistic efficacy of sound
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implications Section -->
+    <section id="implications" class="section implications-section">
+        <div class="container">
+            <h2>Critical Stakes & Implications</h2>
+            <p class="section-intro">Three fundamental laws that reshape our understanding of listening, attention, and belonging.</p>
+            
+            <div class="laws-container">
+                <div class="law-card">
+                    <div class="law-number">01</div>
+                    <h3>Law of Linguistic Prioritization</h3>
+                    <p>We are predisposed to attend to and process sensory information along linguistically defined lines, often deferring to linguistic representations even when they contradict more accurate direct sensory memories.</p>
+                    <div class="law-implications">
+                        <h4>Implications:</h4>
+                        <ul>
+                            <li>Language acts as a primary filter for reality</li>
+                            <li>Linguistic categories override raw sensory data</li>
+                            <li>Memory is reconstructed through linguistic frameworks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="law-card">
+                    <div class="law-number">02</div>
+                    <h3>Law of Cognitive Ease/Cost</h3>
+                    <p>The efficiency (speed, effortlessness) of the linguistic interface directly influences the likelihood and ease with which certain thoughts or perceptions are engaged, making language a subtle choreographer of attention.</p>
+                    <div class="law-implications">
+                        <h4>Implications:</h4>
+                        <ul>
+                            <li>Grammatical structures facilitate or hinder thought patterns</li>
+                            <li>Lexical gaps create cognitive effort</li>
+                            <li>Language shapes frequency of cognitive operations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="law-card">
+                    <div class="law-number">03</div>
+                    <h3>Law of Functional Resonance</h3>
+                    <p>Beyond semantic understanding, communal belonging can be forged and reality affirmed through shared participation in oral traditions and the recognition of the functional power of sound, irrespective of explicit meaning.</p>
+                    <div class="law-implications">
+                        <h4>Implications:</h4>
+                        <ul>
+                            <li>Sound carries social and cultural work</li>
+                            <li>Meaning extends beyond semantic content</li>
+                            <li>Oral traditions create community bonds</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="future-implications">
+                <h3>Reshaping What Counts as "Listening"</h3>
+                <div class="listening-redefinition">
+                    <div class="old-listening">
+                        <h4>Traditional View</h4>
+                        <p>Passive acoustic reception</p>
+                        <p>Universal auditory processing</p>
+                        <p>Objective sound perception</p>
+                    </div>
+                    <div class="transformation-arrow">⟹</div>
+                    <div class="new-listening">
+                        <h4>Linguistic Interface View</h4>
+                        <p>Active, culturally mediated process</p>
+                        <p>Language-specific auditory construction</p>
+                        <p>Subjective, filtered sound experience</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="call-to-action">
+                <h3>A New Understanding</h3>
+                <p>This research demands we attend to the "language habits of our community" as the fundamental architecture of our sensory and cognitive world. We must ignore the illusion of universal, objective perception and reframe silence not just as absence of sound, but as linguistic void where categories are lacking.</p>
+                
+                <div class="scholars-tribute">
+                    <h4>Key Contributors</h4>
+                    <div class="scholars-grid">
+                        <span>Edward Sapir</span>
+                        <span>Benjamin Lee Whorf</span>
+                        <span>Bronislaw Malinowski</span>
+                        <span>Paul Kay</span>
+                        <span>Willett Kempton</span>
+                        <span>Eleanor Rosch</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 The Auditory-Linguistic Perceptual Loom. A Digital Humanities Exploration.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
